@@ -16,6 +16,8 @@ const getData = async () => {
     const { data } = await fetch(
       `https://register.brydz.gniezno.pl/cezar/?pid=${pid.value}`
     );
+    console.log(data);
+    console.log(data.json());
     formData.value = await data.json();
   } catch (err) {
     console.error(err);
