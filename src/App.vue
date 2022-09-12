@@ -103,7 +103,6 @@
           <div class="formbuilder-checkbox">
             <input
               name="player1_food[]"
-              v-model="player1_food[]"
               access="false"
               id="player1_food-0"
               value="no-food"
