@@ -6,7 +6,7 @@
 
     <div class="rendered-form">
       <div class="">
-        <h1 access="false" id="formheader" v-model="form_header">
+        <h1 access="false" id="formheader">
           <b
             style="
               color: rgb(32, 33, 36);
