@@ -1,7 +1,7 @@
 <template>
-  <form @submit.prevent="getData" action="/" method="post">
+  <form @submit.prevent="getData">
     <input v-model="player1_pid" />
-    <input type="submit" value="Get Data" />
+    <input type="submit" value="Pobierz dane" />
     <pre>{{ formData }}</pre>
 
     <div class="rendered-form">
@@ -29,7 +29,6 @@
           access="false"
           id="email"
           required="required"
-          aria-required="true"
         />
       </div>
       <div class="formbuilder-text form-group field-phone">
@@ -96,7 +95,7 @@
         />
       </div>
       <div class="formbuilder-checkbox-group form-group field-player1_food">
-        <label for="player1_food" class="formbuilder-checkbox-group-label"
+        <label for="player1_food" class="formbuilder-csheckbox-group-label"
           >Obiad</label
         >
         <div class="checkbox-group">
@@ -203,9 +202,33 @@
   </form>
 </template>
 
-<script setup>
+<script>
 import { ref } from 'vue';
-const player1_pid = ref('');
+
+export default {
+  data() {
+    return {
+      email: '',
+      phone: '',
+      player1_cezarid: '5510',
+      player1_name: '',
+      player1_surname: '',
+      player1_club: '',
+      player1_food: [],
+      player1_looking_for_partner: false,
+      player2_cezarid: '',
+      player2_name: '',
+      player2_surname: '',
+      player2_club: '',
+      player2_food: [],
+      other_options: [],
+
+  
+    }
+  }
+}
+
+const player1_cezarid = ref('');
 const formData = ref(null);
 
 const getData = async () => {
