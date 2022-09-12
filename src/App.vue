@@ -14,7 +14,7 @@ const formData = ref(null);
 const getData = async () => {
   try {
     const { data } = await fetch(
-      `https://sur10.dyn.konopnickiej.com/5510/?pid=${pid.value}`
+      `https://register.brydz.gniezno.pl/cezar/?pid=${pid.value}`
     );
     formData.value = data.json();
   } catch (err) {
