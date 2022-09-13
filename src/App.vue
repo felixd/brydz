@@ -169,6 +169,27 @@
 
     <div class="form-group">
       <h2>Pozostałe opcje</h2>
+
+
+      <div class="form-group row">
+        <label class="col-4 col-form-label">Wybierz hotel</label>
+        <div class="col-8">
+          <div class="custom-controls-stacked">
+            <div class="custom-control custom-radio">
+              <input name="hotel" v-model="hotel" id="hotel_0" type="radio" class="custom-control-input" value="1">
+              <label for="hotel_0" class="custom-control-label">Hotel 1</label>
+            </div>
+          </div>
+          <div class="custom-controls-stacked">
+            <div class="custom-control custom-radio">
+              <input name="hotel" v-model="hotel" id="hotel_1" type="radio" class="custom-control-input" value="2">
+              <label for="hotel_1" class="custom-control-label">Hotel 2</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="form-group">
         <label for="parking">Liczba miejsc parkingowych</label>
         <input name="parking" id="parking" v-model="parking" type="text" class="form-control"
@@ -183,18 +204,20 @@
         </div>
       </div>
 
-      <div class="row">
-        <p>Przed wysłaniem formularza upewnij się, że wszystkie dane zostały podane prawidłowo.</p>
-      </div>
-
-      <div class="form-group">
-        <div class="custom-control custom-checkbox custom-control-inline">
-          <input name="rodo" id="rodo" v-model="rodo" type="checkbox" class="custom-control-input" required="required">
-          <label for="rodo" class="custom-control-label">Zgadzam się na przetwarzanie danych</label>
-        </div>
-        <button name="submit" type="submit" class="btn btn-primary">Wyślij</button>
-      </div>
     </div>
+
+    <div class="row">
+      <p>Przed wysłaniem formularza upewnij się, że wszystkie dane zostały podane prawidłowo.</p>
+    </div>
+
+    <div class="form-group">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="rodo" id="rodo" v-model="rodo" type="checkbox" class="custom-control-input" required="required">
+        <label for="rodo" class="custom-control-label">Zgadzam się na przetwarzanie danych</label>
+      </div>
+      <button name="submit" type="submit" class="btn btn-primary">Wyślij</button>
+    </div>
+
   </form>
 </template>
 
@@ -225,8 +248,8 @@ const player2_food_supper = ref()
 const player2_food_vege = ref(false)
 
 const parking = ref()
-const other_options = ref([])
-
+const hotel = ref()
+const information = ref('')
 const rodo = ref(false)
 
 const formData = ref(null);
