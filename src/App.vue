@@ -170,31 +170,6 @@
       </div>
     </div>
   </form>
-
-
-
-  <pre>{{ formData }}</pre>
-  <pre>
-      email: {{ email }}
-      phone: {{ phone }}
-
-      player1_cezarid: {{ player1_cezarid }}
-      player1_name: {{ player1_name }}
-      player1_surname: {{ player1_surname }}
-      player1_club: {{ player1_club }}
-      player1_food: {{ player1_food }}
-      player1_looking_partner: {{ player1_looking_partner }}
-
-      player2_cezarid: {{ player2_cezarid }}
-      player2_name: {{ player2_name }}
-      player2_surname: {{ player2_surname }}
-      player2_club: {{ player2_club }}
-      player2_food: {{ player2_food }}
-     
-
-      other_options: {{ other_options }}
-    </pre>
-
 </template>
 
 <script setup>
@@ -203,7 +178,7 @@ import { ref } from 'vue';
 const email = ref('')
 const phone = ref('')
 
-const player1_cezarid = ref('')
+const player1_cezarid = ref('5510')
 const player1_name = ref('')
 const player1_surname = ref('')
 const player1_club = ref('')
@@ -227,11 +202,10 @@ const getCezar1 = async () => {
     );
     formData.value = await player1_cezarData.json();
 
-    player1_name.value = formData["IMIE"];
-    player1_surname.value = formData["NAZWISKO"];
-    player1_club.value = formData["KLUB"];
+    player1_name.value = formData.value["IMIE"];
+    player1_surname.value = formData.value["NAZWISKO"];
+    player1_club.value = formData.value["KLUB"];
 
-    console.log(formData.value);
   } catch (err) {
     console.error(err);
   }
@@ -245,11 +219,10 @@ const getCezar2 = async () => {
     );
     formData.value = await player2_cezarData.json();
 
-    player2_name.value = formData["IMIE"];
-    player2_surname.value = formData["NAZWISKO"];
-    player2_club.value = formData["KLUB"];
+    player2_name.value = formData.value["IMIE"];
+    player2_surname.value = formData.value["NAZWISKO"];
+    player2_club.value = formData.value["KLUB"];
 
-    console.log(formData.value);
   } catch (err) {
     console.error(err);
   }
