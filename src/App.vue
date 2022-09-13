@@ -206,7 +206,7 @@ export default {
       email: '',
       phone: '',
 
-      player1_cezarid: '5510',
+      player1_cezarid: '',
       player1_name: '',
       player1_surname: '',
       player1_club: '',
