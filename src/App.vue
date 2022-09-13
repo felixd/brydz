@@ -40,7 +40,7 @@
           <input id="player1_cezarid" name="player1_cezarid" v-model="player1_cezarid" placeholder="xxxxx" type="text"
             aria-describedby="player1_cezaridHelpBlock" class="form-control">
           <div class="input-group-append">
-            <div class="input-group-text" @click="getCezarPlayer1();">Pobierz dane</div>
+            <div class="input-group-text" @click="getCezar1">Pobierz dane</div>
           </div>
         </div>
         <span id="player1_cezaridHelpBlock" class="form-text text-muted">Identyfikator gracza w bazie CEZAR.</span>
@@ -88,8 +88,9 @@
         <label>Szukam partnera</label>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_looking_partner" id="player1_looking_partner" v-model="player1_looking_partner" type="checkbox" class="custom-control-input"
-              value="yes" aria-describedby="player1_looking_partnerHelpBlock">
+            <input name="player1_looking_partner" id="player1_looking_partner" v-model="player1_looking_partner"
+              type="checkbox" class="custom-control-input" value="yes"
+              aria-describedby="player1_looking_partnerHelpBlock">
             <label for="player1_looking_partner" class="custom-control-label">Tak</label>
           </div>
           <span id="player1_looking_partnerHelpBlock" class="form-text text-muted">Zaznacz to pole jeżeli szukasz
@@ -103,7 +104,7 @@
       <div class="form-group">
         <label for="player2_cezarid">Cezar ID</label>
         <div class="input-group">
-          <input id="player2_cezarid" name="player2_cezarid" placeholder="xxxxx" type="text"
+          <input id="player2_cezarid" name="player2_cezarid" v-model="player2_cezarid" placeholder="xxxxx" type="text"
             aria-describedby="player2_cezaridHelpBlock" class="form-control">
           <div class="input-group-append">
             <div class="input-group-text">Pobierz dane</div>
@@ -113,33 +114,39 @@
       </div>
       <div class="form-group">
         <label for="player2_name">Imię</label>
-        <input id="player2_name" name="player2_name" type="text" class="form-control" required="required">
+        <input id="player2_name" name="player2_name" v-model="player2_name" type="text" class="form-control"
+          required="required">
       </div>
       <div class="form-group">
         <label for="player2_surname">Nazwisko</label>
-        <input id="player2_surname" name="player2_surname" type="text" class="form-control" required="required">
+        <input id="player2_surname" name="player2_surname" v-model="player2_surname" type="text" class="form-control"
+          required="required">
       </div>
       <div class="form-group">
         <label for="player2_club">Klub</label>
-        <input id="player2_club" name="player2_club" type="text" class="form-control">
+        <input id="player2_club" name="player2_club" v-model="player2_club" type="text" class="form-control">
       </div>
       <div class="form-group">
         <label>Obiad</label>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player2_food" id="player2_food_0" type="checkbox" class="custom-control-input" value="no">
+            <input name="player2_food" id="player2_food_0" v-model="player2_food" type="checkbox"
+              class="custom-control-input" value="no">
             <label for="player2_food_0" class="custom-control-label">Brak</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player2_food" id="player2_food_1" type="checkbox" class="custom-control-input" value="day1">
+            <input name="player2_food" id="player2_food_1" v-model="player2_food" type="checkbox"
+              class="custom-control-input" value="day1">
             <label for="player2_food_1" class="custom-control-label">Dzień 1</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player2_food" id="player2_food_2" type="checkbox" class="custom-control-input" value="day2">
+            <input name="player2_food" id="player2_food_2" v-model="player2_food" type="checkbox"
+              class="custom-control-input" value="day2">
             <label for="player2_food_2" class="custom-control-label">Dzień 2</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player2_food" id="player2_food_3" type="checkbox" class="custom-control-input" value="vege">
+            <input name="player2_food" id="player2_food_3" v-model="player2_food" type="checkbox"
+              class="custom-control-input" value="vege">
             <label for="player2_food_3" class="custom-control-label">Wegetariański</label>
           </div>
         </div>
@@ -152,8 +159,8 @@
       <div class="form-group">
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="other_options" id="other_options_0" type="checkbox" class="custom-control-input"
-              value="parking">
+            <input name="other_options" id="other_options_0" v-model="other_options" type="checkbox"
+              class="custom-control-input" value="parking">
             <label for="other_options_0" class="custom-control-label">Parking</label>
           </div>
         </div>
@@ -174,13 +181,18 @@
       player1_cezarid: {{ player1_cezarid }}
       player1_name: {{ player1_name }}
       player1_surname: {{ player1_surname }}
+      player1_club: {{ player1_club }}
       player1_food: {{ player1_food }}
       player1_looking_partner: {{ player1_looking_partner }}
 
       player2_cezarid: {{ player2_cezarid }}
       player2_name: {{ player2_name }}
       player2_surname: {{ player2_surname }}
+      player2_club: {{ player2_club }}
       player2_food: {{ player2_food }}
+     
+
+      other_options: {{ other_options }}
     </pre>
 
 </template>
@@ -216,10 +228,10 @@ const formData = ref(null);
 
 const getCezar1 = async () => {
   try {
-    const cezarData = await fetch(
-      `https://register.brydz.gniezno.pl/cezar/?pid=${pid.value}`
+    const player1_cezarData = await fetch(
+      `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/cezar/?pid=${player1_cezarid.value}`
     );
-    formData.value = await cezarData.json();
+    formData.value = await player1_cezarData.json();
     console.log(formData.value);
   } catch (err) {
     console.error(err);
