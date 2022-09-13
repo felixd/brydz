@@ -27,7 +27,8 @@
             <i class="fa fa-phone"></i>
           </div>
         </div>
-        <input id="phone" name="phone" placeholder="+48xxxxxxxxx" type="text" class="form-control" required="required">
+        <input id="phone" name="phone" v-model="phone" placeholder="+48xxxxxxxxx" type="text" class="form-control"
+          required="required">
       </div>
     </div>
 
@@ -36,43 +37,49 @@
       <div class="form-group">
         <label for="player1_cezarid">Cezar ID</label>
         <div class="input-group">
-          <input id="player1_cezarid" name="player1_cezarid" placeholder="xxxxx" type="text"
+          <input id="player1_cezarid" name="player1_cezarid" v-model="player1_cezarid" placeholder="xxxxx" type="text"
             aria-describedby="player1_cezaridHelpBlock" class="form-control">
           <div class="input-group-append">
-            <div class="input-group-text">Pobierz dane</div>
+            <div class="input-group-text" @click="getCezarPlayer1();">Pobierz dane</div>
           </div>
         </div>
         <span id="player1_cezaridHelpBlock" class="form-text text-muted">Identyfikator gracza w bazie CEZAR.</span>
       </div>
       <div class="form-group">
         <label for="player1_name">Imię</label>
-        <input id="player1_name" name="player1_name" type="text" class="form-control" required="required">
+        <input id="player1_name" name="player1_name" v-model="player1_name" type="text" class="form-control"
+          required="required">
       </div>
       <div class="form-group">
         <label for="player1_surname">Nazwisko</label>
-        <input id="player1_surname" name="player1_surname" type="text" class="form-control" required="required">
+        <input id="player1_surname" name="player1_surname" v-model="player1_surname" type="text" class="form-control"
+          required="required">
       </div>
       <div class="form-group">
         <label for="player1_club">Klub</label>
-        <input id="player1_club" name="player1_club" type="text" class="form-control">
+        <input id="player1_club" name="player1_club" v-model="player1_club" type="text" class="form-control">
       </div>
       <div class="form-group">
         <label>Obiad</label>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_0" type="checkbox" class="custom-control-input" value="no">
+            <input name="player1_food" id="player1_food_0" v-model="player1_food" type="checkbox"
+              class="custom-control-input" value="no">
             <label for="player1_food_0" class="custom-control-label">Brak</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_1" type="checkbox" class="custom-control-input" value="day1">
+            <input name="player1_food" id="player1_food_1" v-model="player1_food" type="checkbox"
+              class="custom-control-input" value="day1">
             <label for="player1_food_1" class="custom-control-label">Dzień 1</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_2" type="checkbox" class="custom-control-input" value="day2">
+            <input name="player1_food" id="player1_food_2" v-model="player1_food" type="checkbox"
+              class="custom-control-input" value="day2">
             <label for="player1_food_2" class="custom-control-label">Dzień 2</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_3" type="checkbox" class="custom-control-input" value="vege">
+            <input name="player1_food" id="player1_food_3" v-model="player1_food" type="checkbox"
+              class="custom-control-input" value="vege">
             <label for="player1_food_3" class="custom-control-label">Wegetariański</label>
           </div>
         </div>
@@ -81,11 +88,11 @@
         <label>Szukam partnera</label>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_partner" id="player1_partner_0" type="checkbox" class="custom-control-input"
-              value="yes" aria-describedby="player1_partnerHelpBlock">
-            <label for="player1_partner_0" class="custom-control-label">Tak</label>
+            <input name="player1_looking_partner" id="player1_looking_partner" v-model="player1_looking_partner" type="checkbox" class="custom-control-input"
+              value="yes" aria-describedby="player1_looking_partnerHelpBlock">
+            <label for="player1_looking_partner" class="custom-control-label">Tak</label>
           </div>
-          <span id="player1_partnerHelpBlock" class="form-text text-muted">Zaznacz to pole jeżeli szukasz
+          <span id="player1_looking_partnerHelpBlock" class="form-text text-muted">Zaznacz to pole jeżeli szukasz
             partnera</span>
         </div>
       </div>
@@ -94,58 +101,55 @@
     <div class="form-group">
       <h2>Dane drugiego gracza</h2>
       <div class="form-group">
-        <label for="player1_cezarid">Cezar ID</label>
+        <label for="player2_cezarid">Cezar ID</label>
         <div class="input-group">
-          <input id="player1_cezarid" name="player1_cezarid" placeholder="xxxxx" type="text"
-            aria-describedby="player1_cezaridHelpBlock" class="form-control">
+          <input id="player2_cezarid" name="player2_cezarid" placeholder="xxxxx" type="text"
+            aria-describedby="player2_cezaridHelpBlock" class="form-control">
           <div class="input-group-append">
             <div class="input-group-text">Pobierz dane</div>
           </div>
         </div>
-        <span id="player1_cezaridHelpBlock" class="form-text text-muted">Identyfikator gracza w bazie CEZAR.</span>
+        <span id="player2_cezaridHelpBlock" class="form-text text-muted">Identyfikator gracza w bazie CEZAR.</span>
       </div>
       <div class="form-group">
-        <label for="player1_name">Imię</label>
-        <input id="player1_name" name="player1_name" type="text" class="form-control" required="required">
+        <label for="player2_name">Imię</label>
+        <input id="player2_name" name="player2_name" type="text" class="form-control" required="required">
       </div>
       <div class="form-group">
-        <label for="player1_surname">Nazwisko</label>
-        <input id="player1_surname" name="player1_surname" type="text" class="form-control" required="required">
+        <label for="player2_surname">Nazwisko</label>
+        <input id="player2_surname" name="player2_surname" type="text" class="form-control" required="required">
       </div>
       <div class="form-group">
-        <label for="player1_club">Klub</label>
-        <input id="player1_club" name="player1_club" type="text" class="form-control">
+        <label for="player2_club">Klub</label>
+        <input id="player2_club" name="player2_club" type="text" class="form-control">
       </div>
       <div class="form-group">
         <label>Obiad</label>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_0" type="checkbox" class="custom-control-input" value="no">
-            <label for="player1_food_0" class="custom-control-label">Brak</label>
+            <input name="player2_food" id="player2_food_0" type="checkbox" class="custom-control-input" value="no">
+            <label for="player2_food_0" class="custom-control-label">Brak</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_1" type="checkbox" class="custom-control-input" value="day1">
-            <label for="player1_food_1" class="custom-control-label">Dzień 1</label>
+            <input name="player2_food" id="player2_food_1" type="checkbox" class="custom-control-input" value="day1">
+            <label for="player2_food_1" class="custom-control-label">Dzień 1</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_2" type="checkbox" class="custom-control-input" value="day2">
-            <label for="player1_food_2" class="custom-control-label">Dzień 2</label>
+            <input name="player2_food" id="player2_food_2" type="checkbox" class="custom-control-input" value="day2">
+            <label for="player2_food_2" class="custom-control-label">Dzień 2</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_3" type="checkbox" class="custom-control-input" value="vege">
-            <label for="player1_food_3" class="custom-control-label">Wegetariański</label>
+            <input name="player2_food" id="player2_food_3" type="checkbox" class="custom-control-input" value="vege">
+            <label for="player2_food_3" class="custom-control-label">Wegetariański</label>
           </div>
         </div>
       </div>
 
     </div>
 
-
     <div class="form-group">
       <h2>Dodatkowe opcje</h2>
-
       <div class="form-group">
-
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
             <input name="other_options" id="other_options_0" type="checkbox" class="custom-control-input"
@@ -158,8 +162,6 @@
         <button name="submit" type="submit" class="btn btn-primary">Wyślij</button>
       </div>
     </div>
-
-
   </form>
 
 
