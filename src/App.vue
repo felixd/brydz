@@ -89,7 +89,7 @@
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
             <input name="player1_has_partner" id="player1_has_partner" v-model="player1_has_partner" type="checkbox"
-              class="custom-control-input" value="true" aria-describedby="player1_has_partnerHelpBlock">
+              class="custom-control-input" value="0" aria-describedby="player1_has_partnerHelpBlock">
             <label for="player1_has_partner" class="custom-control-label">Tak</label>
           </div>
           <span id="player1_has_partnerHelpBlock" class="form-text text-muted"></span>
