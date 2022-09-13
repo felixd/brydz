@@ -182,7 +182,7 @@ import { ref } from 'vue';
 const email = ref('')
 const phone = ref('')
 
-const player1_cezarid = ref('5510')
+const player1_cezarid = ref('')
 const player1_name = ref('')
 const player1_surname = ref('')
 const player1_club = ref('')
@@ -195,6 +195,8 @@ const player2_surname = ref('')
 const player2_club = ref('')
 const player2_food = ref([])
 const other_options = ref([])
+
+const rodo = ref(false)
 
 const formData = ref(null);
 
