@@ -197,37 +197,31 @@
 
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 
-export default {
-  data() {
-    return {
-      email: '',
-      phone: '',
+const email = ref('')
+const phone = ref('')
 
-      player1_cezarid: '',
-      player1_name: '',
-      player1_surname: '',
-      player1_club: '',
-      player1_food: [],
-      player1_looking_partner: false,
+const player1_cezarid = ref('')
+const player1_name = ref('')
+const player1_surname = ref('')
+const player1_club = ref('')
+const player1_food = ref([])
+const player1_looking_partner = ref(false)
 
-      player2_cezarid: '',
-      player2_name: '',
-      player2_surname: '',
-      player2_club: '',
-      player2_food: [],
-
-      other_options: [],
-    }
-  }
-}
-
+const player2_cezarid = ref('')
+const player2_name = ref('')
+const player2_surname = ref('')
+const player2_club = ref('')
+const player2_food = ref([]) 
+const other_options = ref([])
+    
 const formData = ref(null);
 
 const getCezar1 = async () => {
   try {
+    console.log('Trying to get data for player one');
     const player1_cezarData = await fetch(
       `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/cezar/?pid=${player1_cezarid.value}`
     );
@@ -237,4 +231,19 @@ const getCezar1 = async () => {
     console.error(err);
   }
 };
+
+const getCezar2 = async () => {
+  try {
+    console.log('Trying to get data for player two');
+    const player2_cezarData = await fetch(
+      `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/cezar/?pid=${player2_cezarid.value}`
+    );
+    formData.value = await player2_cezarData.json();
+    console.log(formData.value);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+
 </script>
