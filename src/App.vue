@@ -61,7 +61,7 @@
           <div class="custom-control custom-checkbox custom-control-inline">
             <input name="player1_food_vege" id="player1_food_vege" v-model="player1_food_vege" type="checkbox"
               class="custom-control-input">
-            <label for="player1_food_vege" class="custom-control-label">Posiłki wegetariańskie</label>
+            <label for="player1_food_vege" value="0" class="custom-control-label">Posiłki wegetariańskie</label>
           </div>
 
           <div class="form-group">
@@ -133,7 +133,7 @@
 
           <div class="custom-control custom-checkbox custom-control-inline">
             <input name="player2_food_vege" id="player2_food_vege" v-model="player2_food_vege" type="checkbox"
-              class="custom-control-input">
+              class="custom-control-input" value="0">
             <label for="player2_food_vege" class="custom-control-label">Posiłki wegetariańskie</label>
           </div>
 
