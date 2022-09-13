@@ -166,6 +166,11 @@
         </div>
       </div>
       <div class="form-group">
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input name="rodo" id="rodo" v-model="rodo" type="checkbox"
+              class="custom-control-input" required="required">
+            <label for="rodo" class="custom-control-label">Zgadzam się na przetwarzanie danych</label>
+          </div>
         <button name="submit" type="submit" class="btn btn-primary">Wyślij</button>
       </div>
     </div>
