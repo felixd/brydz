@@ -176,14 +176,14 @@
         <div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-radio">
-              <input name="hotel" v-model="hotel" id="hotel_0" type="radio" class="custom-control-input" value="1">
-              <label for="hotel_0" class="custom-control-label">Hotel 1</label>
+              <input name="hotel" v-model="hotel" id="hotel_1" type="radio" class="custom-control-input" value="hotel1">
+              <label for="hotel_1" class="custom-control-label">Hotel 1</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-radio">
-              <input name="hotel" id="hotel_1" v-model="hotel" type="radio" class="custom-control-input" value="2">
-              <label for="hotel_1" class="custom-control-label">Hotel 2</label>
+              <input name="hotel" id="hotel_2" v-model="hotel" type="radio" class="custom-control-input" value="hotel2">
+              <label for="hotel_2" class="custom-control-label">Hotel 2</label>
             </div>
           </div>
         </div>
@@ -269,7 +269,7 @@ const getCezar1 = async () => {
   try {
     console.log('Trying to get data for player one');
     const player1_cezarData = await fetch(
-      `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/cezar/?pid=${player1_cezarid.value}`
+      `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/app/?pid=${player1_cezarid.value}`
     );
     formData.value = await player1_cezarData.json();
 
@@ -286,7 +286,7 @@ const getCezar2 = async () => {
   try {
     console.log('Trying to get data for player two');
     const player2_cezarData = await fetch(
-      `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/cezar/?pid=${player2_cezarid.value}`
+      `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/app/?pid=${player2_cezarid.value}`
     );
     formData.value = await player2_cezarData.json();
 
