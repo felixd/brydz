@@ -176,13 +176,13 @@
         <div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-radio">
-              <input name="hotel" id="hotel_0" type="radio" class="custom-control-input" value="1">
+              <input name="hotel" v-model="hotel" id="hotel_0" type="radio" class="custom-control-input" value="1">
               <label for="hotel_0" class="custom-control-label">Hotel 1</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-radio">
-              <input name="hotel" id="hotel_1" type="radio" class="custom-control-input" value="2">
+              <input name="hotel" id="hotel_1" v-model="hotel" type="radio" class="custom-control-input" value="2">
               <label for="hotel_1" class="custom-control-label">Hotel 2</label>
             </div>
           </div>
@@ -192,17 +192,13 @@
       <div class="form-group">
         <label for="hotel_room_type">Rodzaj pokoi</label>
         <div>
-          <select id="hotel_room_type" name="hotel_room_type" class="custom-select">
+          <select id="hotel_room_type" v-model="hotel_room_type" name="hotel_room_type" class="custom-select">
             <option value="single">Pojedyncze</option>
             <option value="multi">Wieloosobowe</option>
           </select>
         </div>
       </div>
-
-
     </div>
-
-
     <div class="form-group">
       <label for="parking">Liczba miejsc parkingowych</label>
       <input name="parking" id="parking" v-model="parking" type="text" class="form-control"
