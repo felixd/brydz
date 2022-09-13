@@ -59,28 +59,35 @@
         <label for="player1_club">Klub</label>
         <input id="player1_club" name="player1_club" v-model="player1_club" type="text" class="form-control">
       </div>
+
+      <!-- POSIŁKI -->
       <div class="form-group">
-        <h3>Obiad</h3>
+        <h3>Posiłki</h3>
         <div>
+
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_0" v-model="player1_food" type="checkbox"
-              class="custom-control-input" value="no">
-            <label for="player1_food_0" class="custom-control-label">Brak</label>
+            <input name="player1_food_vege" id="player1_food_vege" v-model="player1_food_vege" type="checkbox"
+              class="custom-control-input">
+            <label for="player1_food_vege" class="custom-control-label">Posiłki wegetariańskie</label>
           </div>
-          <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_1" v-model="player1_food" type="checkbox"
-              class="custom-control-input" value="day1">
-            <label for="player1_food_1" class="custom-control-label">Dzień 1</label>
+
+          <div class="form-group">
+            <label for="player1_food_breakfast">Śniadania</label>
+            <input name="player1_food_breakfast" id="player1_food_breakfast" v-model="player1_food_breakfast"
+              type="text" class="form-control" placeholder="Podaj liczbę śniadań: 1,2,3 itd"
+              aria-describedby="player1_food_breakfastHelpBlock">
           </div>
-          <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_2" v-model="player1_food" type="checkbox"
-              class="custom-control-input" value="day2">
-            <label for="player1_food_2" class="custom-control-label">Dzień 2</label>
+          <div class="form-group">
+            <label for="player1_food_dinner">Obiady</label>
+            <input name="player1_food_dinner" id="player1_food_dinner" v-model="player1_food_dinner" type="text"
+              class="form-control" placeholder="Podaj liczbę obiadów: 1,2,3 itd"
+              aria-describedby="player1_food_dinnerHelpBlock">
           </div>
-          <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_food" id="player1_food_3" v-model="player1_food" type="checkbox"
-              class="custom-control-input" value="vege">
-            <label for="player1_food_3" class="custom-control-label">Wegetariański</label>
+          <div class="form-group">
+            <label for="player1_food_supper">Kolacje</label>
+            <input name="player1_food_supper" id="player1_food_supper" v-model="player1_food_supper" type="text"
+              class="form-control" placeholder="Podaj liczbę kolacji: 1,2,3 itd"
+              aria-describedby="player1_food_supperHelpBlock">
           </div>
         </div>
       </div>
@@ -125,28 +132,35 @@
         <label for="player2_club">Klub</label>
         <input id="player2_club" name="player2_club" v-model="player2_club" type="text" class="form-control">
       </div>
+
+      <!-- POSIŁKI -->
       <div class="form-group">
-        <label>Obiad</label>
+        <h3>Posiłki</h3>
         <div>
+
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player2_food" id="player2_food_0" v-model="player2_food" type="checkbox"
-              class="custom-control-input" value="no">
-            <label for="player2_food_0" class="custom-control-label">Brak</label>
+            <input name="player2_food_vege" id="player2_food_vege" v-model="player2_food_vege" type="checkbox"
+              class="custom-control-input">
+            <label for="player2_food_vege" class="custom-control-label">Posiłki wegetariańskie</label>
           </div>
-          <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player2_food" id="player2_food_1" v-model="player2_food" type="checkbox"
-              class="custom-control-input" value="day1">
-            <label for="player2_food_1" class="custom-control-label">Dzień 1</label>
+
+          <div class="form-group">
+            <label for="player2_food_breakfast">Śniadania</label>
+            <input name="player2_food_breakfast" id="player2_food_breakfast" v-model="player2_food_breakfast"
+              type="text" class="form-control" placeholder="Podaj liczbę śniadań: 1,2,3 itd"
+              aria-describedby="player2_food_breakfastHelpBlock">
           </div>
-          <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player2_food" id="player2_food_2" v-model="player2_food" type="checkbox"
-              class="custom-control-input" value="day2">
-            <label for="player2_food_2" class="custom-control-label">Dzień 2</label>
+          <div class="form-group">
+            <label for="player2_food_dinner">Obiady</label>
+            <input name="player2_food_dinner" id="player2_food_dinner" v-model="player2_food_dinner" type="text"
+              class="form-control" placeholder="Podaj liczbę obiadów: 1,2,3 itd"
+              aria-describedby="player2_food_dinnerHelpBlock">
           </div>
-          <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player2_food" id="player2_food_3" v-model="player2_food" type="checkbox"
-              class="custom-control-input" value="vege">
-            <label for="player2_food_3" class="custom-control-label">Wegetariański</label>
+          <div class="form-group">
+            <label for="player2_food_supper">Kolacje</label>
+            <input name="player2_food_supper" id="player2_food_supper" v-model="player2_food_supper" type="text"
+              class="form-control" placeholder="Podaj liczbę kolacji: 1,2,3 itd"
+              aria-describedby="player2_food_supperHelpBlock">
           </div>
         </div>
       </div>
@@ -154,16 +168,25 @@
     </div>
 
     <div class="form-group">
-      <h2>Dodatkowe opcje</h2>
+      <h2>Pozostałe opcje</h2>
       <div class="form-group">
-        <div>
-          <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="other_options" id="other_options_0" v-model="other_options" type="checkbox"
-              class="custom-control-input" value="parking">
-            <label for="other_options_0" class="custom-control-label">Parking</label>
-          </div>
+        <label for="parking">Liczba miejsc parkingowych</label>
+        <input name="parking" id="parking" v-model="parking" type="text" class="form-control"
+          placeholder="Podaj potrzebną liczbę miejsc parkingowych: 1,2,3 itd" aria-describedby="parkingHelpBlock">
+      </div>
+
+      <div class="form-group">
+        <div class="form-group">
+          <label for="information">Uwagi</label>
+          <textarea name="information" id="information" v-model="information" type="textarea" class="form-control"
+            placeholder="Uwagi" rows="3" />
         </div>
       </div>
+
+      <div class="row">
+        <p>Przed wysłaniem formularza upewnij się, że wszystkie dane zostały podane prawidłowo.</p>
+      </div>
+
       <div class="form-group">
         <div class="custom-control custom-checkbox custom-control-inline">
           <input name="rodo" id="rodo" v-model="rodo" type="checkbox" class="custom-control-input" required="required">
@@ -185,14 +208,23 @@ const player1_cezarid = ref('')
 const player1_name = ref('')
 const player1_surname = ref('')
 const player1_club = ref('')
-const player1_food = ref([])
+const player1_food_breakfast = ref()
+const player1_food_dinner = ref()
+const player1_food_supper = ref()
+const player1_food_vege = ref(false)
+
 const player1_has_partner = ref(false)
 
 const player2_cezarid = ref('')
 const player2_name = ref('')
 const player2_surname = ref('')
 const player2_club = ref('')
-const player2_food = ref([])
+const player2_food_breakfast = ref()
+const player2_food_dinner = ref()
+const player2_food_supper = ref()
+const player2_food_vege = ref(false)
+
+const parking = ref()
 const other_options = ref([])
 
 const rodo = ref(false)
