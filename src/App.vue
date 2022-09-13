@@ -57,7 +57,7 @@
       <div class="form-group">
         <h3>Posiłki</h3>
         <div>
-
+          
           <div class="custom-control custom-checkbox custom-control-inline">
             <input name="player1_food_vege" id="player1_food_vege" v-model="player1_food_vege" type="checkbox"
               class="custom-control-input">
