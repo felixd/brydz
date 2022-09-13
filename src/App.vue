@@ -187,6 +187,18 @@
             </div>
           </div>
         </div>
+
+        <div class="form-group row">
+          <label for="hotel_room_type" class="col-4 col-form-label">Rodzaj pokoi</label>
+          <div class="col-8">
+            <select id="hotel_room_type" name="hotel_room_type" class="custom-select">
+              <option value="single">Pojedyncze</option>
+              <option value="multi">Wieloosobowe</option>
+            </select>
+          </div>
+        </div>
+
+
       </div>
 
 
@@ -249,6 +261,8 @@ const player2_food_vege = ref(false)
 
 const parking = ref()
 const hotel = ref()
+// Single or Multi
+const hotel_room_type = ref()
 const information = ref('')
 const rodo = ref(false)
 
