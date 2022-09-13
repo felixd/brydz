@@ -8,14 +8,14 @@
 
   <form id="app" @submit="checkForm" action="" method="post">
     <div class="form-group">
-      <label for="email">Email</label>
+      <label for="email"><strong>Email</strong></label>
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
             <i class="fa fa-address-card-o"></i>
           </div>
         </div>
-        <input id="email" name="email" v-model="email" placeholder="Email" type="text" required="required"
+        <input id="email" name="email" v-model="email" placeholder="Email (wymagany)" type="text" required="required"
           class="form-control">
       </div>
     </div>
@@ -27,8 +27,7 @@
             <i class="fa fa-phone"></i>
           </div>
         </div>
-        <input id="phone" name="phone" v-model="phone" placeholder="+48xxxxxxxxx" type="text" class="form-control"
-          required="required">
+        <input id="phone" name="phone" v-model="phone" placeholder="+48xxxxxxxxx" type="text" class="form-control">
       </div>
     </div>
 
@@ -43,17 +42,18 @@
             <div class="input-group-text" @click="getCezar1">Pobierz dane</div>
           </div>
         </div>
-        <span id="player1_cezaridHelpBlock" class="form-text text-muted">Identyfikator gracza w bazie CEZAR.</span>
+        <span id="player1_cezaridHelpBlock" class="form-text text-muted">Identyfikator gracza w bazie CEZAR. Jeżeli
+          gracz nie znajduje się w bazie podaj dane samodzielnie.</span>
       </div>
       <div class="form-group">
-        <label for="player1_name">Imię</label>
-        <input id="player1_name" name="player1_name" v-model="player1_name" type="text" class="form-control"
-          required="required">
+        <label for="player1_name"><strong>Imię</strong></label>
+        <input id="player1_name" name="player1_name" placeholder="Imię (pole wymagane)" v-model="player1_name"
+          type="text" class="form-control" required="required">
       </div>
       <div class="form-group">
-        <label for="player1_surname">Nazwisko</label>
-        <input id="player1_surname" name="player1_surname" v-model="player1_surname" type="text" class="form-control"
-          required="required">
+        <label for="player1_surname"><strong>Nazwisko</strong></label>
+        <input id="player1_surname" name="player1_surname" placeholder="Nazwisko (pole wymagane)"
+          v-model="player1_surname" type="text" class="form-control" required="required">
       </div>
       <div class="form-group">
         <label for="player1_club">Klub</label>
@@ -88,9 +88,8 @@
         <h3>Mam partnera</h3>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_has_partner" id="player1_has_partner" v-model="player1_has_partner"
-              type="checkbox" class="custom-control-input" value="true"
-              aria-describedby="player1_has_partnerHelpBlock">
+            <input name="player1_has_partner" id="player1_has_partner" v-model="player1_has_partner" type="checkbox"
+              class="custom-control-input" value="true" aria-describedby="player1_has_partnerHelpBlock">
             <label for="player1_has_partner" class="custom-control-label">Tak</label>
           </div>
           <span id="player1_has_partnerHelpBlock" class="form-text text-muted"></span>
@@ -109,17 +108,18 @@
             <div class="input-group-text" @click="getCezar2">Pobierz dane</div>
           </div>
         </div>
-        <span id="player2_cezaridHelpBlock" class="form-text text-muted">Identyfikator gracza w bazie CEZAR.</span>
+        <span id="player2_cezaridHelpBlock" class="form-text text-muted">Identyfikator gracza w bazie CEZAR. Jeżeli
+          gracz nie znajduje się w bazie podaj dane samodzielnie.</span>
       </div>
       <div class="form-group">
-        <label for="player2_name">Imię</label>
-        <input id="player2_name" name="player2_name" v-model="player2_name" type="text" class="form-control"
-          required="required">
+        <label for="player2_name"><strong>Imię</strong></label>
+        <input id="player2_name" name="player2_name" placeholder="Imię (pole wymagane)" v-model="player2_name"
+          type="text" class="form-control" required="required">
       </div>
       <div class="form-group">
-        <label for="player2_surname">Nazwisko</label>
-        <input id="player2_surname" name="player2_surname" v-model="player2_surname" type="text" class="form-control"
-          required="required">
+        <label for="player2_surname"><strong>Nazwisko</strong></label>
+        <input id="player2_surname" name="player2_surname" placeholder="Nazwisko (pole wymagane)"
+          v-model="player2_surname" type="text" class="form-control" required="required">
       </div>
       <div class="form-group">
         <label for="player2_club">Klub</label>
@@ -166,10 +166,9 @@
       </div>
       <div class="form-group">
         <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="rodo" id="rodo" v-model="rodo" type="checkbox"
-              class="custom-control-input" required="required">
-            <label for="rodo" class="custom-control-label">Zgadzam się na przetwarzanie danych</label>
-          </div>
+          <input name="rodo" id="rodo" v-model="rodo" type="checkbox" class="custom-control-input" required="required">
+          <label for="rodo" class="custom-control-label">Zgadzam się na przetwarzanie danych</label>
+        </div>
         <button name="submit" type="submit" class="btn btn-primary">Wyślij</button>
       </div>
     </div>
