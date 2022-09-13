@@ -88,17 +88,17 @@
         <h3>Mam partnera</h3>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input name="player1_looking_partner" id="player1_looking_partner" v-model="player1_looking_partner"
+            <input name="player1_has_partner" id="player1_has_partner" v-model="player1_has_partner"
               type="checkbox" class="custom-control-input" value="true"
-              aria-describedby="player1_looking_partnerHelpBlock">
-            <label for="player1_looking_partner" class="custom-control-label">Tak</label>
+              aria-describedby="player1_has_partnerHelpBlock">
+            <label for="player1_has_partner" class="custom-control-label">Tak</label>
           </div>
-          <span id="player1_looking_partnerHelpBlock" class="form-text text-muted"></span>
+          <span id="player1_has_partnerHelpBlock" class="form-text text-muted"></span>
         </div>
       </div>
     </div>
 
-    <div v-show="player1_looking_partner" class="form-group">
+    <div v-if="player1_has_partner" class="form-group">
       <h2>Dane drugiego gracza</h2>
       <div class="form-group">
         <label for="player2_cezarid">Cezar ID</label>
@@ -187,7 +187,7 @@ const player1_name = ref('')
 const player1_surname = ref('')
 const player1_club = ref('')
 const player1_food = ref([])
-const player1_looking_partner = ref(false)
+const player1_has_partner = ref(false)
 
 const player2_cezarid = ref('')
 const player2_name = ref('')
