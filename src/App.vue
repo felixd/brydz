@@ -6,7 +6,7 @@
 
   <!-- FORMULARZ -->
 
-  <form id="app" @submit="checkForm" action="" method="post">
+  <form id="app" @submit="checkForm" action="/app/" method="post">
     <div class="form-group">
       <label for="email"><strong>Email</strong></label>
       <div class="input-group">
