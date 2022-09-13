@@ -6,7 +6,7 @@
 
   <!-- FORMULARZ -->
 
-  <form id="app" @submit="checkForm">
+  <form id="app" @submit="checkForm" action="" method="post">
     <div class="form-group">
       <label for="email">Email</label>
       <div class="input-group">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="form-group">
-      <h2>Dane pierwszego gracza</h2>
+      <h2>Dane gracza</h2>
       <div class="form-group">
         <label for="player1_cezarid">Cezar ID</label>
         <div class="input-group">
@@ -60,7 +60,7 @@
         <input id="player1_club" name="player1_club" v-model="player1_club" type="text" class="form-control">
       </div>
       <div class="form-group">
-        <label>Obiad</label>
+        <h3>Obiad</h3>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
             <input name="player1_food" id="player1_food_0" v-model="player1_food" type="checkbox"
@@ -85,21 +85,20 @@
         </div>
       </div>
       <div class="form-group">
-        <label>Szukam partnera</label>
+        <h3>Mam partnera</h3>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
             <input name="player1_looking_partner" id="player1_looking_partner" v-model="player1_looking_partner"
-              type="checkbox" class="custom-control-input" value="yes"
+              type="checkbox" class="custom-control-input" value="true"
               aria-describedby="player1_looking_partnerHelpBlock">
             <label for="player1_looking_partner" class="custom-control-label">Tak</label>
           </div>
-          <span id="player1_looking_partnerHelpBlock" class="form-text text-muted">Zaznacz to pole jeżeli szukasz
-            partnera</span>
+          <span id="player1_looking_partnerHelpBlock" class="form-text text-muted"></span>
         </div>
       </div>
     </div>
 
-    <div class="form-group">
+    <div v-show="player1_looking_partner" class="form-group">
       <h2>Dane drugiego gracza</h2>
       <div class="form-group">
         <label for="player2_cezarid">Cezar ID</label>
