@@ -171,52 +171,53 @@
       <h2>Pozostałe opcje</h2>
 
 
-      <div class="form-group row">
-        <label class="col-4 col-form-label">Wybierz hotel</label>
-        <div class="col-8">
+      <div class="form-group">
+        <label>Wybierz hotel</label>
+        <div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-radio">
-              <input name="hotel" v-model="hotel" id="hotel_0" type="radio" class="custom-control-input" value="1">
+              <input name="hotel" id="hotel_0" type="radio" class="custom-control-input" value="1">
               <label for="hotel_0" class="custom-control-label">Hotel 1</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-radio">
-              <input name="hotel" v-model="hotel" id="hotel_1" type="radio" class="custom-control-input" value="2">
+              <input name="hotel" id="hotel_1" type="radio" class="custom-control-input" value="2">
               <label for="hotel_1" class="custom-control-label">Hotel 2</label>
             </div>
           </div>
         </div>
-
-        <div class="form-group row">
-          <label for="hotel_room_type" class="col-4 col-form-label">Rodzaj pokoi</label>
-          <div class="col-8">
-            <select id="hotel_room_type" name="hotel_room_type" class="custom-select">
-              <option value="single">Pojedyncze</option>
-              <option value="multi">Wieloosobowe</option>
-            </select>
-          </div>
-        </div>
-
-
-      </div>
-
-
-      <div class="form-group">
-        <label for="parking">Liczba miejsc parkingowych</label>
-        <input name="parking" id="parking" v-model="parking" type="text" class="form-control"
-          placeholder="Podaj potrzebną liczbę miejsc parkingowych: 1,2,3 itd" aria-describedby="parkingHelpBlock">
       </div>
 
       <div class="form-group">
-        <div class="form-group">
-          <label for="information">Uwagi</label>
-          <textarea name="information" id="information" v-model="information" type="textarea" class="form-control"
-            placeholder="Uwagi" rows="3" />
+        <label for="hotel_room_type">Rodzaj pokoi</label>
+        <div>
+          <select id="hotel_room_type" name="hotel_room_type" class="custom-select">
+            <option value="single">Pojedyncze</option>
+            <option value="multi">Wieloosobowe</option>
+          </select>
         </div>
       </div>
+
 
     </div>
+
+
+    <div class="form-group">
+      <label for="parking">Liczba miejsc parkingowych</label>
+      <input name="parking" id="parking" v-model="parking" type="text" class="form-control"
+        placeholder="Podaj potrzebną liczbę miejsc parkingowych: 1,2,3 itd" aria-describedby="parkingHelpBlock">
+    </div>
+
+    <div class="form-group">
+      <div class="form-group">
+        <label for="information">Uwagi</label>
+        <textarea name="information" id="information" v-model="information" type="textarea" class="form-control"
+          placeholder="Uwagi" rows="3" />
+      </div>
+    </div>
+
+
 
     <div class="row">
       <p>Przed wysłaniem formularza upewnij się, że wszystkie dane zostały podane prawidłowo.</p>
