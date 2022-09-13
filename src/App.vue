@@ -107,7 +107,7 @@
           <input id="player2_cezarid" name="player2_cezarid" v-model="player2_cezarid" placeholder="xxxxx" type="text"
             aria-describedby="player2_cezaridHelpBlock" class="form-control">
           <div class="input-group-append">
-            <div class="input-group-text">Pobierz dane</div>
+            <div class="input-group-text" @click="getCezar2">Pobierz dane</div>
           </div>
         </div>
         <span id="player2_cezaridHelpBlock" class="form-text text-muted">Identyfikator gracza w bazie CEZAR.</span>
@@ -214,9 +214,9 @@ const player2_cezarid = ref('')
 const player2_name = ref('')
 const player2_surname = ref('')
 const player2_club = ref('')
-const player2_food = ref([]) 
+const player2_food = ref([])
 const other_options = ref([])
-    
+
 const formData = ref(null);
 
 const getCezar1 = async () => {
