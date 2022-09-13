@@ -36,7 +36,7 @@
       <div class="form-group">
         <label for="player1_cezarid">Cezar ID</label>
         <div class="input-group">
-          <input id="player1_cezarid" name="player1_cezarid" v-model="player1_cezarid" placeholder="xxxxx" type="text"
+          <input id="player1_cezarid" name="player1_cezarid" v-model="player1_cezarid" type="text"
             aria-describedby="player1_cezaridHelpBlock" class="form-control">
           <div class="input-group-append">
             <div class="input-group-text" @click="getCezar1">Pobierz dane</div>
@@ -102,7 +102,7 @@
       <div class="form-group">
         <label for="player2_cezarid">Cezar ID</label>
         <div class="input-group">
-          <input id="player2_cezarid" name="player2_cezarid" v-model="player2_cezarid" placeholder="xxxxx" type="text"
+          <input id="player2_cezarid" name="player2_cezarid" v-model="player2_cezarid" type="text"
             aria-describedby="player2_cezaridHelpBlock" class="form-control">
           <div class="input-group-append">
             <div class="input-group-text" @click="getCezar2">Pobierz dane</div>
