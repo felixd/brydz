@@ -226,6 +226,10 @@ const getCezar1 = async () => {
       `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/cezar/?pid=${player1_cezarid.value}`
     );
     formData.value = await player1_cezarData.json();
+    player1_name = formData["IMIE"];
+    player1_surname = formData["NAZWISKO"];
+    player1_club = formData["KLUB"];
+
     console.log(formData.value);
   } catch (err) {
     console.error(err);
@@ -239,6 +243,11 @@ const getCezar2 = async () => {
       `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/cezar/?pid=${player2_cezarid.value}`
     );
     formData.value = await player2_cezarData.json();
+
+    player2_name = formData["IMIE"];
+    player2_surname = formData["NAZWISKO"];
+    player2_club = formData["KLUB"];
+
     console.log(formData.value);
   } catch (err) {
     console.error(err);
