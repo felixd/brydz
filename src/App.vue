@@ -67,7 +67,7 @@
             </div>
           </div>
 
-          <div class="form-group">
+          <div v-if="false" class="form-group">
             <label for="player1_food_breakfast">Śniadania</label>
             <input name="player1_food_breakfast" id="player1_food_breakfast" v-model="player1_food_breakfast"
               type="text" class="form-control" placeholder="Podaj liczbę śniadań: 0,1,2,3 itd"
@@ -79,7 +79,7 @@
               class="form-control" placeholder="Podaj liczbę obiadów: 0,1,2,3 itd"
               aria-describedby="player1_food_dinnerHelpBlock">
           </div>
-          <div class="form-group">
+          <div v-if="false" class="form-group">
             <label for="player1_food_supper">Kolacje</label>
             <input name="player1_food_supper" id="player1_food_supper" v-model="player1_food_supper" type="text"
               class="form-control" placeholder="Podaj liczbę kolacji: 0,1,2,3 itd"
@@ -142,7 +142,7 @@
             </div>
           </div>
 
-          <div class="form-group">
+          <div v-if="false" class="form-group">
             <label for="player2_food_breakfast">Śniadania</label>
             <input name="player2_food_breakfast" id="player2_food_breakfast" v-model="player2_food_breakfast"
               type="text" class="form-control" placeholder="Podaj liczbę śniadań: 0,1,2,3 itd"
@@ -154,7 +154,7 @@
               class="form-control" placeholder="Podaj liczbę obiadów: 0,1,2,3 itd"
               aria-describedby="player2_food_dinnerHelpBlock">
           </div>
-          <div class="form-group">
+          <div v-if="false" class="form-group">
             <label for="player2_food_supper">Kolacje</label>
             <input name="player2_food_supper" id="player2_food_supper" v-model="player2_food_supper" type="text"
               class="form-control" placeholder="Podaj liczbę kolacji: 0,1,2,3 itd"
@@ -168,27 +168,30 @@
     <div class="form-group">
       <h2>Pozostałe opcje</h2>
 
-
       <div class="form-group">
+        <label>Restauracja</label>
+        <div>
+          <select id="restaurant" v-model="restaurant" name="restaurant" class="custom-select">
+            <option value="restaurant0" selected>Dowolna</option>
+            <option value="restaurant1">Restauracja 1: Estella</option>
+            <option value="restaurant2">Restauracja 2: Gotham Pizza</option>
+          </select>
+        </div>
+      </div>
+
+      <div v-if="false" class="form-group">
         <label>Wybierz hotel</label>
         <div>
-          <div class="custom-controls-stacked">
-            <div class="custom-control custom-radio">
-              <input name="hotel" v-model="hotel" id="hotel_1" type="radio" class="custom-control-input" value="hotel1">
-              <label for="hotel_1" class="custom-control-label">Hotel 1</label>
-            </div>
-          </div>
-          <div class="custom-controls-stacked">
-            <div class="custom-control custom-radio">
-              <input name="hotel" id="hotel_2" v-model="hotel" type="radio" class="custom-control-input" value="hotel2">
-              <label for="hotel_2" class="custom-control-label">Hotel 2</label>
-            </div>
-          </div>
+          <select id="hotel" v-model="hotel" name="hotel" class="custom-select">
+            <option value="" selected>Bez noclegu</option>
+            <option value="hotel1">Hotel 1</option>
+            <option value="hotel2">Hotel 2</option>
+          </select>
         </div>
       </div>
 
       <div class="form-group" v-if="hotel">
-        <label for="hotel_room_type">Rodzaj pokoi</label>
+        <label for="hotel_room_type">Rodzaj pokoi</label>                               
         <div>
           <select id="hotel_room_type" v-model="hotel_room_type" name="hotel_room_type" class="custom-select">
             <option value="single">Pojedyncze</option>
@@ -196,11 +199,12 @@
           </select>
         </div>
       </div>
+      
     </div>
     <div class="form-group">
       <label for="parking">Liczba miejsc parkingowych</label>
       <input name="parking" id="parking" v-model="parking" type="text" class="form-control"
-        placeholder="Podaj potrzebną liczbę miejsc parkingowych: 0,1,2,3 itd" aria-describedby="parkingHelpBlock">
+        placeholder="Podaj potrzebną eliczbę miejsc parkingowych: 0,1,2,3 itd" aria-describedby="parkingHelpBlock">
     </div>
 
     <div class="form-group">
@@ -235,9 +239,9 @@ const email = ref('')
 const phone = ref('')
 
 const player1_cezarid = ref()
-const player1_name = ref('')
-const player1_surname = ref('')
-const player1_club = ref('')
+const player1_name = ref()
+const player1_surname = ref()
+const player1_club = ref()
 const player1_food_breakfast = ref()
 const player1_food_dinner = ref()
 const player1_food_supper = ref()
@@ -248,7 +252,7 @@ const player1_has_partner = ref()
 const player2_cezarid = ref()
 const player2_name = ref()
 const player2_surname = ref()
-const player2_club = ref('')
+const player2_club = ref()
 const player2_food_breakfast = ref()
 const player2_food_dinner = ref()
 const player2_food_supper = ref()
@@ -256,14 +260,14 @@ const player2_food_vege = ref()
 
 const parking = ref()
 const hotel = ref()
-// Single or Multi
 const hotel_room_type = ref()
-const information = ref('')
+const restaurant = ref()
+const information = ref()
 const rodo = ref()
 
 const formData = ref(null);
 
-const getCezar1_alert = ref('');
+const getCezar1_alert = ref();
 const getCezar1 = async () => {
   try {
     console.log('Trying to get data for player one');
