@@ -51,7 +51,7 @@
           v-model="player1_surname" type="text" class="form-control" required="required">
       </div>
       <div class="form-group">
-        <label for="player1_club">Klub</label>
+        <label for="player1_club">Drużyna</label>
         <input id="player1_club" name="player1_club" v-model="player1_club" type="text" class="form-control">
       </div>
 
@@ -126,7 +126,7 @@
           v-model="player2_surname" type="text" class="form-control" required="required">
       </div>
       <div class="form-group">
-        <label for="player2_club">Klub</label>
+        <label for="player2_club">Drużyna</label>
         <input id="player2_club" name="player2_club" v-model="player2_club" type="text" class="form-control">
       </div>
 
