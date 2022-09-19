@@ -88,7 +88,7 @@
         </div>
       </div>
       <div class="form-group">
-        <h3>Mam partnera</h3>
+        <h3 style="color: green">Mam partnera</h3>
         <div>
           <div class="custom-control custom-checkbox custom-control-inline">
             <input name="player1_has_partner" id="player1_has_partner" v-model="player1_has_partner" type="checkbox"
