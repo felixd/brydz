@@ -174,7 +174,7 @@
           <select id="restaurant" v-model="restaurant" name="restaurant" class="custom-select">
             <option value="restaurant0" selected>Dowolna</option>
             <option value="restaurant1">Restauracja 1: Estella</option>
-            <option value="restaurant2">Restauracja 2: Gotham Pizza</option>
+            <option v-if="false" value="restaurant2">Restauracja 2: Gotham Pizza</option>
           </select>
         </div>
       </div>
