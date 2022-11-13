@@ -58,6 +58,7 @@
       <!-- POSIŁKI -->
       <div class="form-group">
         <h3>Posiłki</h3>
+        <p class="text-info">W sobotę nie ma obiadu. W niedzielę dostępna jest wyłącznie restauracja Estella z dwiema opcjami posiłków - wegetariański i normalny</p>
         <div>
           <div class="form-group">
             <div class="custom-control custom-checkbox custom-control-inline">
@@ -133,7 +134,6 @@
       <!-- POSIŁKI -->
       <div class="form-group">
         <h3>Posiłki</h3>
-        <h2><strong>Informacja:</strong>W sobotę nie ma obiadu. W niedzielę dostępna jest tylko jedna restauracja (Estella) z dwiema opcjami - wegetariańskie posiłki oraz normalne</h2>
         <div>
           <div class="form-group">
             <div class="custom-control custom-checkbox custom-control-inline">

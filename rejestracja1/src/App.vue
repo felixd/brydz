@@ -58,7 +58,7 @@
       <!-- POSIŁKI -->
       <div class="form-group">
         <h3>Posiłki</h3>
-        <h2><strong>Informacja:</strong>W sobotę nie ma obiadu. W niedzielę dostępna jest tylko jedna restauracja (Estella) z dwiema opcjami - wegetariańskie posiłki oraz normalne</h2>
+        <p class="text-info">W sobotę nie ma obiadu. W niedzielę dostępna jest wyłącznie restauracja Estella z dwiema opcjami posiłków - wegetariański i normalny</p>
         <div>
           <div class="form-group">
             <div class="custom-control custom-checkbox custom-control-inline">
@@ -175,7 +175,7 @@
           <select id="restaurant" v-model="restaurant" name="restaurant" class="custom-select">
             <option value="restaurant0" selected>Dowolna</option>
             <option value="restaurant1">Restauracja 1: Estella</option>
-            <option v-if="false"  value="restaurant2">Restauracja 2: Gotham Pizza</option>
+            <option v-if="false" value="restaurant2">Restauracja 2: Gotham Pizza</option>
           </select>
         </div>
       </div>
@@ -192,7 +192,7 @@
       </div>
 
       <div class="form-group" v-if="hotel">
-        <label for="hotel_room_type">Rodzaj pokoi</label>                               
+        <label for="hotel_room_type">Rodzaj pokoi</label>
         <div>
           <select id="hotel_room_type" v-model="hotel_room_type" name="hotel_room_type" class="custom-select">
             <option value="single">Pojedyncze</option>
@@ -200,7 +200,7 @@
           </select>
         </div>
       </div>
-      
+
     </div>
     <div class="form-group">
       <label for="parking">Liczba miejsc parkingowych</label>
