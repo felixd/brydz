@@ -11,7 +11,7 @@ cd ..
 cd rejestracja2
 npm run build
 mkdir dist/app
-cp ../app/*.php dist/app
+cp ../php_app/*.php dist/app
 cd ..
 
 chown -R www-data:www-data *
