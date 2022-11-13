@@ -272,7 +272,7 @@ const getCezar1 = async () => {
   try {
     console.log('Trying to get data for player one');
     const player1_cezarData = await fetch(
-      `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/app/?pid=${player1_cezarid.value}`
+      `/app/?pid=${player1_cezarid.value}`
     );
 
     formData.value = await player1_cezarData.json();
@@ -297,7 +297,7 @@ const getCezar2 = async () => {
   try {
     console.log('Trying to get data for player two');
     const player2_cezarData = await fetch(
-      `https://rejestracja.gpwlkp2022.brydz.gniezno.pl/app/?pid=${player2_cezarid.value}`
+      `/app/?pid=${player2_cezarid.value}`
     );
     formData.value = await player2_cezarData.json();
 
