@@ -7,7 +7,7 @@ echo "Rejestracja 1"
 cd rejestracja1
 npm run build
 mkdir dist/app
-echo "Rejestracja 2 PHP"
+echo "Rejestracja 1 PHP"
 cp ../php_app/*.php dist/app
 cd ..
 
