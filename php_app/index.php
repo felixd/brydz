@@ -63,7 +63,8 @@ if (!empty($_POST)) {
     $values = implode("','", $escaped_values);
     $values = "'$values'";
     $values = str_replace("''", 'NULL', $values);
-    $sql = "INSERT INTO ($config['db_table']) ($columns) VALUES ($values)";
+    $table = $config['db_table'];
+    $sql = "INSERT INTO `$table` ($columns) VALUES ($values)";
 
     $result = mysqli_query($mysqli, $sql);
     /*
