@@ -7,8 +7,7 @@ $mysqli = mysqli_connect(
     $config['db_host'],
     $config['db_username'],
     $config['db_pass'],
-    $config['db_database'],
-    $config['db_table']
+    $config['db_database']
 ) or die("Error " . mysqli_error($mysqli));
 
 global $mysqli;
