@@ -95,9 +95,11 @@ if (!empty($_POST)) {
             <div class="row text-center align-middle mx-auto">
                 <h1 class="text-center mx-auto">Dziękujemy za rejestrację</h1>
             </div>
-            <div class="row">
+            <!--            
+                <div class="row">
                 <a class="rounded mx-auto d-block" href="/"><img class="rounded mx-auto d-block" src="/assets/baner.6252a309.jpg" /></a>
             </div>
+            -->
         </div>
     </body>
 
