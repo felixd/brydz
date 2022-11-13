@@ -5,7 +5,7 @@ git pull
 cd rejestracja1
 npm run build
 mkdir dist/app
-cp ../app/*.php dist/app
+cp ../php_app/*.php dist/app
 cd ..
 
 cd rejestracja2
