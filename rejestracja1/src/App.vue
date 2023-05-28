@@ -58,9 +58,9 @@
       <!-- POSIŁKI -->
       <div class="form-group">
         <h3>Posiłki</h3>
-        <p class="text-info">W sobotę nie ma obiadu. W niedzielę dostępna jest wyłącznie restauracja Estella z dwiema opcjami posiłków - wegetariański i normalny</p>
+        <!-- <p class="text-info"></p> -->
         <div>
-          <div class="form-group">
+          <div v-if="false" class="form-group">
             <div class="custom-control custom-checkbox custom-control-inline">
               <input name="player1_food_vege" id="player1_food_vege" v-model="player1_food_vege" type="checkbox"
                 class="custom-control-input">
@@ -135,7 +135,7 @@
       <div class="form-group">
         <h3>Posiłki</h3>
         <div>
-          <div class="form-group">
+          <div v-if="false" class="form-group">
             <div class="custom-control custom-checkbox custom-control-inline">
               <input name="player2_food_vege" id="player2_food_vege" v-model="player2_food_vege" type="checkbox"
                 class="custom-control-input" value="1">
