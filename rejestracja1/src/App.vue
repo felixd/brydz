@@ -169,7 +169,7 @@
     <div class="form-group">
       <h2>Pozostałe opcje</h2>
 
-      <div class="form-group">
+      <div v-if="false" class="form-group">
         <label>Restauracja</label>
         <div>
           <select id="restaurant" v-model="restaurant" name="restaurant" class="custom-select">
@@ -202,7 +202,7 @@
       </div>
 
     </div>
-    <div class="form-group">
+    <div v-if="false" class="form-group">
       <label for="parking">Liczba miejsc parkingowych</label>
       <input name="parking" id="parking" v-model="parking" type="text" class="form-control"
         placeholder="Podaj potrzebną eliczbę miejsc parkingowych: 0,1,2,3 itd" aria-describedby="parkingHelpBlock">
