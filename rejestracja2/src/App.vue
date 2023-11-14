@@ -58,9 +58,9 @@
       <!-- POSIŁKI -->
       <div class="form-group">
         <h3>Posiłki</h3>
-        <p class="text-info">W sobotę nie ma obiadu. W niedzielę dostępna jest wyłącznie restauracja Estella z dwiema opcjami posiłków - wegetariański i normalny</p>
+        <!-- <p class="text-info"></p> -->
         <div>
-          <div class="form-group">
+          <div v-if="false" class="form-group">
             <div class="custom-control custom-checkbox custom-control-inline">
               <input name="player1_food_vege" id="player1_food_vege" v-model="player1_food_vege" type="checkbox"
                 class="custom-control-input">
@@ -135,7 +135,7 @@
       <div class="form-group">
         <h3>Posiłki</h3>
         <div>
-          <div class="form-group">
+          <div v-if="false" class="form-group">
             <div class="custom-control custom-checkbox custom-control-inline">
               <input name="player2_food_vege" id="player2_food_vege" v-model="player2_food_vege" type="checkbox"
                 class="custom-control-input" value="1">
@@ -169,7 +169,7 @@
     <div class="form-group">
       <h2>Pozostałe opcje</h2>
 
-      <div class="form-group">
+      <div v-if="false" class="form-group">
         <label>Restauracja</label>
         <div>
           <select id="restaurant" v-model="restaurant" name="restaurant" class="custom-select">
@@ -192,7 +192,7 @@
       </div>
 
       <div class="form-group" v-if="hotel">
-        <label for="hotel_room_type">Rodzaj pokoi</label>                               
+        <label for="hotel_room_type">Rodzaj pokoi</label>
         <div>
           <select id="hotel_room_type" v-model="hotel_room_type" name="hotel_room_type" class="custom-select">
             <option value="single">Pojedyncze</option>
@@ -200,9 +200,9 @@
           </select>
         </div>
       </div>
-      
+
     </div>
-    <div class="form-group">
+    <div v-if="false" class="form-group">
       <label for="parking">Liczba miejsc parkingowych</label>
       <input name="parking" id="parking" v-model="parking" type="text" class="form-control"
         placeholder="Podaj potrzebną eliczbę miejsc parkingowych: 0,1,2,3 itd" aria-describedby="parkingHelpBlock">
